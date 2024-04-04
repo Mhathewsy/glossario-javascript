@@ -1,0 +1,75 @@
+/* Define a fonte e o esquema de cores básicos para o corpo do documento */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte */
+    background-color: #f5f5f5; /* Define a cor de fundo */
+    color: #333; /* Define a cor do texto */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #007bff; /* Define a cor de fundo */
+    color: #fff; /* Define a cor do texto */
+    text-align: center; /* Alinha o texto centralmente */
+    padding: 20px 0; /* Adiciona preenchimento superior e inferior */
+}
+
+/* Estilo para o título dentro do cabeçalho */
+header h1 {
+    margin: 0; /* Remove margens */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    max-width: 800px; /* Define a largura máxima */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Adiciona preenchimento lateral */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+/* Estilo para o seletor de opções */
+select {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 20px; /* Adiciona preenchimento */
+    margin: 20px 0; /* Adiciona margem superior e inferior */
+    border: 1px solid #ccc; /* Adiciona borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    background-color: #fff; /* Define a cor de fundo */
+}
+/* Estilo para os títulos das IDs em negrito e com uma fonte maior */
+#descricao h2 {
+    font-weight: bold; /* Define o texto em negrito */
+    font-size: 24px; /* Define o tamanho da fonte */
+}
+/* Estilo para a área de descrição */
+#descricao {
+    background-color: #fff; /* Define a cor de fundo */
+    padding: 100px; /* Aumentar o padding para aumentar a área de informação */
+    border: 1px solid #ccc; /* Adiciona borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    text-align: justify; /* Justifica o texto */
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center; /* Alinha o texto centralmente */
+    padding: 20px 0; /* Adiciona preenchimento superior e inferior */
+    background-color: #007bff; /* Define a cor de fundo */
+    color: #fff; /* Define a cor do texto */
+    position: fixed; /* Fixa o rodapé na parte inferior da página */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* Estilo para o texto dentro do rodapé */
+footer p {
+    margin: 0; /* Remove margens */
+    font-size: 14px; /* Define o tamanho da fonte */
+    text-align: center; /* Alinha o texto centralmente */
+    padding: 10px; /* Adiciona preenchimento */
+}

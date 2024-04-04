@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a largura da viewport e a escala inicial -->
+   <meta name="description" content="Glossário JavaScript"> <!-- Descrição da página para motores de busca -->
+   <meta name="author" content="Matheus Fidelis"> <!-- Autor da página -->
+   <title>Glossário JavaScript</title> <!-- Título da página -->
+   <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo de estilos CSS -->
+</head>
+<body>
+   <header>
+      <h1>Glossário JavaScript</h1> <!-- Título principal da página -->
+   </header>
+   <main>
+      <select id="slc-termos">
+         <!-- Opções serão adicionadas dinamicamente pelo JavaScript -->
+      </select>
+      <div id="descricao">
+         <!-- A descrição do termo selecionado será exibida aqui -->
+      </div>
+   <footer>
+       <p>Desenvolvido por Matheus Fidelis &copy; 2024</p> <!-- Rodapé com o nome do autor e o ano -->
+   </footer>
+   </main>
+   <!-- Inclusão da biblioteca jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- Inclusão do arquivo JavaScript com a lógica do banco de dados -->
+   <script src="db.js"></script>
+   <script>
+    $(document).ready(function() {
+        // Função initSelect é passada como callback para db.init
+        db.init(initSelect);
+    });
+    
+    
+    // Função para inicializar o select com os dados do JSON
+    function initSelect() {
+        var select = $('#slc-termos');
+        $.each(db.data, function(index, item) {
+            select.append($('<option>', {
+                value: item.id, // Define o valor da opção como o ID do item
+                text: item.titulo // Define o texto da opção como o título do item
+            }));
+        });
+        
+    }
+   </script>
+</body>
+</html>
